@@ -1,22 +1,23 @@
-const { Configuration, OpenAI } = require('openai')
+const { Configuration, OpenAIApi } = require('openai')
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 })
 
-const openai = new OpenAIAPI(configuration)
+const openai = new OpenAIApi(configuration)
 
 // // Test route to check if the server is running
 // const generateimage = async (req, res) => {
 //   res.status(200).json({ success: true })
 // }
 
-const generateimage = async (req, res) => {
+const generateImage = async (req, res) => {
+  const { prompt, size } = req.body
   try {
     const response = await openai.createImage({
-      propmpt: `${req.body.prompt}}`,
-      n: `${req.body.n}`,
-      size: `${req.body.size}`,
+      prompt,
+      n: 1,
+      size,
     })
 
     const imageUrl = response.data.data[0].url
@@ -38,4 +39,4 @@ const generateimage = async (req, res) => {
     })
   }
 }
-module.exports = { generateimage }
+module.exports = { generateImage }
