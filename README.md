@@ -153,11 +153,20 @@ _For more examples, please refer to the [OpenAI's Image Generation Documentation
   - [x] Set up Express server
     - [x] Add middleware to serve static html to client
     - [x] Add middleware to parse `body` payload in requests to API
-  - [x] Build server-side router logic
-  - [x] Build server-side endpoint controller logic
+  - [ ] Build server-side router logic
+    - [x] Build router for generating images
+    - [ ] Build router for editing images
+  - [ ] Build server-side endpoint controller logic
+    - [x] Build controller for generating images
+    - [ ] Build controllers for editing images
 - [ ] Frontend
   - [ ] Build client-side form handler logic
+    - [ ] Write logic for image generation
+    - [ ] Write logic for image editing
   - [ ] Write client-side markup
+    - [ ] Build form for user to input image generation seed string and image size
+    - [ ] Build form for user to upload image
+    - [ ] Build image editing app and tooling
   - [ ] Add client-side styling
 
 See the [open issues](https://github.com/connoro7/ai-image-generator/issues) for a full list of proposed features (and known issues).
