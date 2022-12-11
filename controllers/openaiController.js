@@ -6,11 +6,6 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration)
 
-// // Test route to check if the server is running
-// const generateimage = async (req, res) => {
-//   res.status(200).json({ success: true })
-// }
-
 const generateImage = async (req, res) => {
   const { prompt, size } = req.body
   try {
