@@ -19,3 +19,4 @@ app.use('/openai', require('./routes/openaiRoutes'))
 app.listen(port, () => {
   console.log(`Server running on port ${port}`)
 })
+ 
